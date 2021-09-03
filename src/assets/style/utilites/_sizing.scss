@@ -1,0 +1,47 @@
+$sizes: (
+    30p: 30px,
+);
+
+@each $key, $value in $sizes {
+    .w-#{$key} {
+        width: $value;
+    }
+
+    .h-#{$key} {
+        height: $value;
+    }
+}
+
+@each $breakpoints, $value in $grid-breakpoints {
+    $next: breakpoint-next($breakpoints);
+    @if $next != null {
+        @include media-breakpoint-up($next) {
+
+            @each $key, $value in  map-merge($sizes,
+                (
+                    25: 25%, 
+                    50: 50%,
+                    75: 75%,
+                    100: 100%,
+                    auto: auto
+                )
+            ) {
+                .w-#{$next}-#{$key} {
+                    width: $value !important;
+                }
+
+                .mw-#{$next}-#{$key} {
+                    max-width: $value !important;
+                }
+
+                .h-#{$next}-#{$key} {
+                    height: $value !important;
+                }
+
+                .mh-#{$next}-#{$key} {
+                    max-height: $value !important;
+                }
+            }
+        }
+    }
+}
