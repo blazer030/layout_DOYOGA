@@ -1,0 +1,5 @@
+@mixin mobile {
+    @include media-breakpoint-down("md") {
+        @content;
+    }
+};
