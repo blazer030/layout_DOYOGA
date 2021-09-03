@@ -73,5 +73,18 @@ $utilities: map-merge(
                 inherit: inherit,
             )
         ),
+
+        "position": map-merge(
+            map-get($utilities, "position"),
+            (
+                responsive: true,
+            )
+        ),
+        "translate-middle": map-merge(
+            map-get($utilities, "translate-middle"),
+            (
+                responsive: true,
+            )
+        )
     )
 );

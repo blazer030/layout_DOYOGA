@@ -27,6 +27,7 @@ export default {
 <style lang="scss" scoped>
   #notfound {
     position: relative;
+    min-height: calc(100vh - 401px);
   }
 
   #notfound .notfound {

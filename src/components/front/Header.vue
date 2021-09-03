@@ -1,8 +1,8 @@
 <template>
-  <header class="navbar navbar-expand-xl bg-secondary py-6 py-md-7">
+  <header class="navbar navbar-expand-xl bg-secondary py-6 py-md-7 sticky-top">
     <div class="container">
       <router-link to="/">
-        <img src="@/assets/image/DOYOGA-logo.png" class="h-30p" alt="logo" />
+        <img src="@/assets/image/DOYOGA-logo.png" class="h-30p img-cover" alt="logo" />
       </router-link>
       <button
         class="navbar-toggler p-0"
